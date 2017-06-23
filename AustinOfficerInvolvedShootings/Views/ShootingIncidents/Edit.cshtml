@@ -1,0 +1,232 @@
+@model AustinOfficerInvolvedShootings.Models.ShootingIncident
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>ShootingIncident</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="CaseNumber" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="CaseNumberId" class="form-control" asp-items="ViewBag.CaseNumberId"></select>
+                <span asp-validation-for="CaseNumberId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Date" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="WeekDay" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="WeekDayId" class="form-control" asp-items="ViewBag.WeekDayId"></select>
+                <span asp-validation-for="WeekDayId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DayPart" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DayPart" class="form-control" />
+                <span asp-validation-for="DayPart" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Premise" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Premise" class="form-control" />
+                <span asp-validation-for="Premise" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="InsideOutisde" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="InsideOutisde" class="form-control" />
+                <span asp-validation-for="InsideOutisde" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SubjectWeapon" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="SubjectWeaponId" class="form-control" asp-items="ViewBag.SubjectWeaponId"></select>
+                <span asp-validation-for="SubjectWeaponId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NumberOfficerShooters" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NumberOfficerShooters" class="form-control" />
+                <span asp-validation-for="NumberOfficerShooters" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CallType" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="CallTypeId" class="form-control" asp-items="ViewBag.CallTypeId"></select>
+                <span asp-validation-for="CallTypeId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NumberOfficerPresent" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NumberOfficerPresent" class="form-control" />
+                <span asp-validation-for="NumberOfficerPresent" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NumberHits" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NumberHits" class="form-control" />
+                <span asp-validation-for="NumberHits" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="OfficerName" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="OfficerNameId" class="form-control" asp-items="ViewBag.OfficerNameId"></select>
+                <span asp-validation-for="OfficerNameId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Rank" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="RankId" class="form-control" asp-items="ViewBag.RankId"></select>
+                <span asp-validation-for="RankId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="OfficerEthnicity" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="OfficerEthnicityId" class="form-control" asp-items="ViewBag.OfficerEthnicityId"></select>
+                <span asp-validation-for="OfficerEthnicityId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="OfficerGender" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="OfficerGender" class="form-control" />
+                <span asp-validation-for="OfficerGender" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="OfficerAge" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="OfficerAge" class="form-control" />
+                <span asp-validation-for="OfficerAge" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Jurisdiction" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Jurisdiction" class="form-control" />
+                <span asp-validation-for="Jurisdiction" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="YearsExperience" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="YearsExperienceId" class="form-control" asp-items="ViewBag.YearsExperienceId"></select>
+                <span asp-validation-for="YearsExperienceId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PreviousOIS" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PreviousOIS" class="form-control" />
+                <span asp-validation-for="PreviousOIS" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="OfficerWeaponCaliber" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="OfficerWeaponCaliberId" class="form-control" asp-items="ViewBag.OfficerWeaponCaliberId"></select>
+                <span asp-validation-for="OfficerWeaponCaliberId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="OfficerWeaponType" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="OfficerWeaponType" class="form-control" />
+                <span asp-validation-for="OfficerWeaponType" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NumberShotsFired" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NumberShotsFired" class="form-control" />
+                <span asp-validation-for="NumberShotsFired" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="HowCleared" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="HowCleared" class="form-control" />
+                <span asp-validation-for="HowCleared" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SubjectEthnicity" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="SubjectEthnicityId" class="form-control" asp-items="ViewBag.SubjectEthnicityId"></select>
+                <span asp-validation-for="SubjectEthnicityId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SubjectGender" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SubjectGender" class="form-control" />
+                <span asp-validation-for="SubjectGender" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SubjectAge" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SubjectAge" class="form-control" />
+                <span asp-validation-for="SubjectAge" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SubjectInjuries" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="SubjectInjuriesId" class="form-control" asp-items="ViewBag.SubjectInjuriesId"></select>
+                <span asp-validation-for="SubjectInjuriesId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DrugsAlcohol" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="DrugsAlcoholId" class="form-control" asp-items="ViewBag.DrugsAlcoholId"></select>
+                <span asp-validation-for="DrugsAlcoholId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Location" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

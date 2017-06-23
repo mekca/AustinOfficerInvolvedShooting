@@ -1,0 +1,192 @@
+@model AustinOfficerInvolvedShootings.Models.ShootingIncident
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ShootingIncident</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CaseNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CaseNumber.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WeekDay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WeekDay.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DayPart)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DayPart)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Premise)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Premise)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InsideOutisde)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InsideOutisde)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CallType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CallType.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DrugsAlcohol)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DrugsAlcohol.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectEthnicity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SubjectEthnicity.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectGender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SubjectGender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectAge)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SubjectAge)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectWeapon)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SubjectWeapon.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Jurisdiction)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Jurisdiction)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OfficerName.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rank)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rank.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficerAge)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OfficerAge)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficerGender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OfficerGender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficerEthnicity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OfficerEthnicity.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.YearsExperience)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.YearsExperience.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousOIS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreviousOIS)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficerWeaponType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OfficerWeaponType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficerWeaponCaliber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OfficerWeaponCaliber.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfficerPresent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfficerPresent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfficerShooters)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfficerShooters)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberShotsFired)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumberShotsFired)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberHits)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumberHits)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SubjectInjuries)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SubjectInjuries.Label)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HowCleared)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HowCleared)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

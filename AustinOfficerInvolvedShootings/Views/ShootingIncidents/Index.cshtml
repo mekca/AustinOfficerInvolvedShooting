@@ -1,0 +1,342 @@
+@model PaginatedList<AustinOfficerInvolvedShootings.Models.ShootingIncident>
+
+@{
+    ViewData["Title"] = "Index";
+    SelectList ctlist = ViewBag.CtSelectList;
+    SelectList injlist = ViewBag.InjSelectList;
+
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table table-responsive table-striped">
+    <thead>
+        <tr>
+                <th>
+                    Case Number
+                    <!--1 Html.DisplayNameFor(model => model.CaseNumber) -->
+                </th>
+                <th>
+                    Date
+                   <!-- 2 Html.DisplayNameFor(model => model.Date)-->
+                </th>
+                <th>
+                    Week Day
+                   <!-- 3
+                   Html.DisplayNameFor(model => model.WeekDay) -->
+                </th>
+                <th>
+                    Day Part
+                  <!--4
+                  Html.DisplayNameFor(model => model.DayPart) -->
+                </th>
+                <th>
+                    Premise
+                   <!--5
+                   Html.DisplayNameFor(model => model.Premise) -->
+                </th>
+                <th>
+                    InsideOutside
+                   <!--6
+                   Html.DisplayNameFor(model => model.InsideOutisde) -->
+                </th>
+                <th>
+                    Location
+                   <!--7
+                   Html.DisplayNameFor(model => model.Location) -->
+                </th>
+                <th>
+                    Call Type
+                   <!--8
+                   Html.DisplayNameFor(model => model.CallType) -->
+                </th>
+                <th>
+                    DrugsAlcohol
+                   <!--9
+                   Html.DisplayNameFor(model => model.DrugsAlcohol) -->
+                </th>
+                <th>
+                    Subject Ethnicity
+                   <!--10
+                   Html.DisplayNameFor(model => model.SubjectEthnicity) -->
+                </th>
+                <th>
+                    Subject Gender 
+                   <!--11
+                   Html.DisplayNameFor(model => model.SubjectGender) -->
+                </th>
+                <th>
+                    Subject Age
+                   <!--12
+                   Html.DisplayNameFor(model => model.SubjectAge) -->
+                </th>
+                <th>
+                    Subject Weapon
+                   <!--13
+                   Html.DisplayNameFor(model => model.SubjectWeapon) -->
+                </th>
+                <th>
+                    Jurisdiction
+                   <!--14
+                   Html.DisplayNameFor(model => model.Jurisdiction) -->
+                </th>
+                <th>
+                    Officer Name
+                   <!--15
+                   Html.DisplayNameFor(model => model.OfficerName) -->
+                </th>
+                <th>
+                    Rank
+                   <!--16
+                   Html.DisplayNameFor(model => model.Rank) -->
+                </th>
+                <th>
+                    Officer Age
+                   <!--17
+                   Html.DisplayNameFor(model => model.OfficerAge) -->
+                </th>
+                <th>
+                    Officer Gender
+                   <!--18
+                   Html.DisplayNameFor(model => model.OfficerGender) -->
+                </th>
+                <th>
+                    Officer Ethnicity
+                   <!--19
+                   Html.DisplayNameFor(model => model.OfficerEthnicity) -->
+                </th>
+                <th>
+                    Years Experience 
+                   <!--20
+                   Html.DisplayNameFor(model => model.YearsExperience) -->
+                 </th>
+                 <th>
+                     PreviousOIS
+                    <!--21
+                    Html.DisplayNameFor(model => model.PreviousOIS) -->
+                 </th>
+                 <th>
+                     Officer Weapon Type
+                    <!--22
+                    Html.DisplayNameFor(model => model.OfficerWeaponType) -->
+                 </th>
+                 <th>
+                     Officer Weapon Caliber
+                    <!--23
+                    Html.DisplayNameFor(model => model.OfficerWeaponCaliber) -->
+                </th>
+                <th>
+                    Number Officer Present
+                   <!--24
+                   Html.DisplayNameFor(model => model.NumberOfficerPresent) -->
+                </th>
+                <th>
+                    Number Officer Shooters
+                   <!--25
+                   Html.DisplayNameFor(model => model.NumberOfficerShooters) -->
+                </th>
+                <th>
+                    Number Shots Fired
+                   <!--26
+                   Html.DisplayNameFor(model => model.NumberShotsFired) -->
+                </th>
+                <th>
+                    Number Hits
+                   <!--27
+                   Html.DisplayNameFor(model => model.NumberHits) -->
+                </th>
+                <th>
+                    Subject Injuries
+                   <!--28
+                   Html.DisplayNameFor(model => model.SubjectInjuries) -->
+                </th> 
+                <th>
+                    How Cleared
+                   <!--29
+                   Html.DisplayNameFor(model => model.HowCleared) -->
+                </th>
+           <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>
+                <form method="post" id="searchString" action="@Url.Action("Index", "ShootingIncidents")">
+                    <div class="form-group no-color has-feedback" style="margin-bottom: 0px">
+                        <input class="form-control hasclear" type="text" id="searchString" name="searchString" value="@ViewData["currentFilter"]" />
+                        <span class="clearer glyphicon glyphicon-remove form-control-feedback"></span>
+                    </div>
+                    </form>
+                </th>
+            <th></th>
+            <th></th>
+            <th>
+                <form method="post" id="ct" action="@Url.Action("Index", "ShootingIncidents")">
+                    @Html.DropDownList("ctFilter", ctlist, "All", new { @class = "form-control", @style = "width: 8rem; display:inline-block" })
+                </form>
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>
+                <form method="post" id="inj" action="@Url.Action("Index", "ShootingIncidents")">
+                    @Html.DropDownList("injFilter", injlist, "All", new { @class = "form-control", @style = "width: 8rem; display:inline-block" })
+                </form>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaseNumber.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeekDay.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DayPart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Premise)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsideOutisde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CallType.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DrugsAlcohol.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectEthnicity.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectWeapon.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jurisdiction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficerName.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rank.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficerAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficerGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficerEthnicity.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearsExperience.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreviousOIS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficerWeaponType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficerWeaponCaliber.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfficerPresent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfficerShooters)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberShotsFired)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberHits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectInjuries.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HowCleared)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>|
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div class="center-block">
+    <a asp-action="Index"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-page="@(Model.PageIndex - 1)"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       class="btn btn-default @prevDisabled btn">
+        Previous
+    </a>
+    <a asp-action="Index"
+       asp-route-sortOrder="@ViewData["CurrentSort"]"
+       asp-route-page="@(Model.PageIndex + 1)"
+       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+       class="btn btn-default @nextDisabled btn">
+        Next
+    </a>
+    <span>Page @(Model.PageIndex) of @(Model.TotalPages)</span>
+</div>
+
+@section scripts
+{
+    <script>
+$(document).ready(function(){
+    $("#ctFilter").change(function () {
+        $("#ct").submit();
+    });
+    $("#injFilter").change(function () {
+        $("#inj").submit();
+    });
+});
+    </script>
+}

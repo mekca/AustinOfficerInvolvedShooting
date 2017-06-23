@@ -1,0 +1,10 @@
+c:\users\kathy\documents\visual studio 2017\Projects\AustinOfficerInvolvedShootings\AustinOfficerInvolvedShootings\bin\Debug\netcoreapp1.1\AustinOfficerInvolvedShootings.deps.json
+c:\users\kathy\documents\visual studio 2017\Projects\AustinOfficerInvolvedShootings\AustinOfficerInvolvedShootings\bin\Debug\netcoreapp1.1\AustinOfficerInvolvedShootings.runtimeconfig.json
+c:\users\kathy\documents\visual studio 2017\Projects\AustinOfficerInvolvedShootings\AustinOfficerInvolvedShootings\bin\Debug\netcoreapp1.1\AustinOfficerInvolvedShootings.runtimeconfig.dev.json
+c:\users\kathy\documents\visual studio 2017\Projects\AustinOfficerInvolvedShootings\AustinOfficerInvolvedShootings\bin\Debug\netcoreapp1.1\AustinOfficerInvolvedShootings.dll
+c:\users\kathy\documents\visual studio 2017\Projects\AustinOfficerInvolvedShootings\AustinOfficerInvolvedShootings\bin\Debug\netcoreapp1.1\AustinOfficerInvolvedShootings.pdb
+c:\users\kathy\documents\visual studio 2017\Projects\AustinOfficerInvolvedShootings\AustinOfficerInvolvedShootings\obj\Debug\netcoreapp1.1\AustinOfficerInvolvedShootings.csprojResolveAssemblyReference.cache
+c:\users\kathy\documents\visual studio 2017\Projects\AustinOfficerInvolvedShootings\AustinOfficerInvolvedShootings\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+c:\users\kathy\documents\visual studio 2017\Projects\AustinOfficerInvolvedShootings\AustinOfficerInvolvedShootings\obj\Debug\netcoreapp1.1\AustinOfficerInvolvedShootings.AssemblyInfo.cs
+c:\users\kathy\documents\visual studio 2017\Projects\AustinOfficerInvolvedShootings\AustinOfficerInvolvedShootings\obj\Debug\netcoreapp1.1\AustinOfficerInvolvedShootings.dll
+c:\users\kathy\documents\visual studio 2017\Projects\AustinOfficerInvolvedShootings\AustinOfficerInvolvedShootings\obj\Debug\netcoreapp1.1\AustinOfficerInvolvedShootings.pdb
