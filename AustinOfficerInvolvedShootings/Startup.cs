@@ -12,6 +12,8 @@ using Microsoft.Extensions.Logging;
 using AustinOfficerInvolvedShootings.Data;
 using AustinOfficerInvolvedShootings.Models;
 using AustinOfficerInvolvedShootings.Services;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Http;
 
 namespace AustinOfficerInvolvedShootings
 {
@@ -48,15 +50,15 @@ namespace AustinOfficerInvolvedShootings
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
-            //services.AddSession();
+            services.AddSession();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
             
-            //services.AddTransient<CartService>();
-            //services.AddScoped<CartList>(sp => SessionCart.GetCart(sp));
-            //services.AddSingleton<IHttpContextAccessor, HttpContextaccessor>();
+            services.AddTransient<CartService>();
+            services.AddScoped<CartList>(sp => SessionCart.GetCart(sp));
+            services.AddSingleton<IHttpContextAccessor, HttpContextaccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -82,7 +84,7 @@ namespace AustinOfficerInvolvedShootings
 
             // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
 
-            //app.UseSession();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

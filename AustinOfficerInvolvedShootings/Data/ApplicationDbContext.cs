@@ -38,5 +38,7 @@ namespace AustinOfficerInvolvedShootings.Data
         public DbSet<AustinOfficerInvolvedShootings.Models.WeekDay> WeekDay { get; set; }
         public DbSet<AustinOfficerInvolvedShootings.Models.YearsExperience> YearsExperience { get; set; }
         public DbSet<AustinOfficerInvolvedShootings.Models.AccountViewModels.EditUserViewModel> EditUserViewModel { get; set; }
+        public DbSet<AustinOfficerInvolvedShootings.Models.Donation> Donation { get; set; }
+        public DbSet<AustinOfficerInvolvedShootings.Models.Cart> Cart { get; set; }
     }
 }
